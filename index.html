@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Abu Syeed — Cybersecurity Student</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg: #0A0E14;
+    --panel: #10151C;
+    --panel-2: #0D1219;
+    --ink: #E6EDF3;
+    --ink-dim: #8DA0B3;
+    --line: #1E2A35;
+    --cyan: #4CD8E0;
+    --amber: #E0A64C;
+  }
+  *{ box-sizing: border-box; }
+  html{ scroll-behavior: smooth; }
+  body{
+    margin:0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: 'IBM Plex Sans', sans-serif;
+    line-height: 1.6;
+  }
+  .wrap{
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 0 28px;
+  }
+  header.hero{
+    padding: 96px 0 64px;
+    border-bottom: 1px solid var(--line);
+  }
+  .prompt-line{
+    font-family: 'JetBrains Mono', monospace;
+    color: var(--cyan);
+    font-size: 0.9rem;
+    margin-bottom: 18px;
+    min-height: 1.4em;
+  }
+  .prompt-line::before{ content: "guest@syeed:~$ "; color: var(--ink-dim); }
+  .cursor{
+    display:inline-block;
+    width: 8px;
+    height: 1em;
+    background: var(--cyan);
+    vertical-align: text-bottom;
+    margin-left: 2px;
+    animation: blink 1s steps(1) infinite;
+  }
+  @keyframes blink{ 50%{ opacity: 0; } }
+  h1{
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: clamp(2.4rem, 6vw, 3.6rem);
+    font-weight: 700;
+    margin: 0 0 10px;
+    letter-spacing: -0.01em;
+  }
+  .role{
+    font-size: 1.15rem;
+    color: var(--ink-dim);
+    max-width: 46ch;
+  }
+  .role strong{ color: var(--amber); font-weight: 600; }
+
+  section{ padding: 56px 0; border-bottom: 1px solid var(--line); }
+  section:last-of-type{ border-bottom: none; }
+
+  h2{
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0 0 20px;
+  }
+  p{ max-width: 62ch; color: var(--ink); }
+  p.dim{ color: var(--ink-dim); }
+
+  .tree{
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.92rem;
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    padding: 22px 26px;
+    color: var(--ink-dim);
+  }
+  .tree .branch{ color: var(--cyan); }
+  .tree .active{ color: var(--ink); }
+  .tree div{ white-space: pre; margin: 3px 0; }
+
+  .goals{ list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; }
+  .goals li{
+    display: flex;
+    gap: 14px;
+    align-items: baseline;
+    max-width: 60ch;
+  }
+  .goals li::before{
+    content: "▸";
+    color: var(--amber);
+    font-family: 'JetBrains Mono', monospace;
+  }
+
+  footer{
+    padding: 48px 0 80px;
+  }
+  .contact-line{
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.95rem;
+    color: var(--ink-dim);
+  }
+  .contact-line a{
+    color: var(--cyan);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+  }
+  .contact-line a:hover{ border-bottom-color: var(--cyan); }
+  .foot-note{ margin-top: 28px; font-size: 0.82rem; color: #56606B; }
+
+  @media (max-width: 520px){
+    header.hero{ padding: 64px 0 44px; }
+    section{ padding: 40px 0; }
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <header class="hero">
+    <div class="prompt-line" id="typedLine"></div>
+    <h1>Abu Syeed</h1>
+    <p class="role">First-semester <strong>Computer Science &amp; Engineering</strong> student at Southeast University, working toward becoming a cybersecurity expert.</p>
+  </header>
+
+  <section id="about">
+    <h2>About</h2>
+    <p>I'm just getting started in CSE, and cybersecurity is the direction I'm building toward. This site is where I'll track what I'm learning, what I'm building, and where I'm headed — starting from semester one.</p>
+  </section>
+
+  <section id="currently">
+    <h2>Where I am right now</h2>
+    <div class="tree">
+<div><span class="branch">southeast-university/</span></div>
+<div>├── cse/</div>
+<div>│   └── <span class="active">semester-01/</span>  ← currently here</div>
+<div>├── self-study/</div>
+<div>│   ├── networking-basics</div>
+<div>│   └── linux-fundamentals</div>
+<div>└── goal/</div>
+<div>    └── cybersecurity-expert.md</div>
+    </div>
+  </section>
+
+  <section id="goals">
+    <h2>What I'm working toward</h2>
+    <ul class="goals">
+      <li>Build a solid foundation in programming, networks, and operating systems before specializing.</li>
+      <li>Learn the fundamentals of cybersecurity — offensive and defensive — through practice, not just theory.</li>
+      <li>Take on small projects and CTF-style challenges as I go, and document them here.</li>
+      <li>Grow this site into a real portfolio as I gain skills worth showing.</li>
+    </ul>
+  </section>
+
+  <footer>
+    <p class="contact-line">Reach me at <a href="mailto:your-email@example.com">your-email@example.com</a> · <a href="#">GitHub</a> · <a href="#">LinkedIn</a></p>
+    <p class="foot-note">Edit the links above with your real email and profiles. Built by Abu Syeed.</p>
+  </footer>
+</div>
+
+<script>
+  const line = "whoami — Abu Syeed, CSE @ Southeast University";
+  const el = document.getElementById('typedLine');
+  let i = 0;
+  function type(){
+    if(i <= line.length){
+      el.innerHTML = line.slice(0, i) + '<span class="cursor"></span>';
+      i++;
+      setTimeout(type, 38);
+    }
+  }
+  type();
+</script>
+
+</body>
+</html>
